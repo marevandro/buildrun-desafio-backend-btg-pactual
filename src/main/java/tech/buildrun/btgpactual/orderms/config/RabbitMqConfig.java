@@ -19,5 +19,6 @@ public class RabbitMqConfig {
     @Bean
     public Declarable orderCreatedQueue() {
         return new Queue(ORDER_CREATED_QUEUE);
+
     }
 }
