@@ -1,12 +1,17 @@
 package tech.buildrun.btgpactual.orderms.entity;
 
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
+
 import java.math.BigDecimal;
 
 public class OrderItem {
 
     private String product;
     private Integer quantity;
-    private BigDecimal proce;
+
+    @Field(targetType = FieldType.DECIMAL128)
+    private BigDecimal price;
 
     public OrderItem(){
 
@@ -29,10 +34,10 @@ public class OrderItem {
     }
 
     public BigDecimal getProce() {
-        return proce;
+        return price;
     }
 
-    public void setProce(BigDecimal proce) {
-        this.proce = proce;
+    public void setProce(BigDecimal price) {
+        this.price = price;
     }
 }
