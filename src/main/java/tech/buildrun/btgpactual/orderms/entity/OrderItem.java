@@ -33,11 +33,11 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public BigDecimal getProce() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setProce(BigDecimal price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 }

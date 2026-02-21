@@ -1,6 +1,5 @@
 package tech.buildrun.btgpactual.orderms.listener;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -10,7 +9,6 @@ import tech.buildrun.btgpactual.orderms.listener.dto.OrderCreatedEvent;
 
 import static tech.buildrun.btgpactual.orderms.config.RabbitMqConfig.ORDER_CREATED_QUEUE;
 
-
 @Component
 public class OrderCreatedListener {
 
@@ -19,5 +17,5 @@ public class OrderCreatedListener {
     @RabbitListener(queues = ORDER_CREATED_QUEUE)
     public void listen(Message<OrderCreatedEvent> message){
         logger.info("Message consumed: {}", message);
-   }
+    }
 }

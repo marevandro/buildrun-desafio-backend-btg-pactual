@@ -24,8 +24,7 @@ public class OrderEntity {
 
     private List<OrderItem> items;
 
-    public OrderEntity (){
-
+    public OrderEntity() {
     }
 
     public Long getOrderId() {
